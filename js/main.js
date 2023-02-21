@@ -3,13 +3,13 @@ alert("¡Hola esta es la calculadora de promedios de las escuela de programacion
 
 let nombreIngresado =prompt("Ingrese su nombre");
 
-while(nombreIngresado != "" && nombreIngresado >0)
+/*while(nombreIngresado != "" && nombreIngresado >0)
     if (nombreIngresado == "" ){
         prompt("Ingrese su nombre nuevamente") 
     }else if (nombreIngresado > 0) {  
         prompt("Ingrese su nombre nuevamente")  
     }else {alert("Hola " +nombreIngresado+ "!" )
-        }
+        }*/
 
 
 
