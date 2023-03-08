@@ -1,17 +1,76 @@
+class Alumno {
+    constructor(nombre, curso, documento) {
+        this.nombre = nombre
+        this.curso = curso
+        this.documento = documento
 
+
+        }
+            descripcion() {
+                return "Nombre :" + this.nombre
+                    + "\nCurso: " + this.curso
+                    + "\nD.N.I: " + this.documento
+            }
+        }
+        
+class AlumnoController {
+    constructor() {
+    this.listaAlumnos = []
+    }
+        
+    agregarAlumno(alumno) {
+        this.listaAlumnos.push(alumno)
+    }
+        
+    filtrarAlumnosPorDni(documento) {
+        return this.listaAlumnos.filter((el) => el.documento <= documento)
+    }
+  
+    mostrarAlumnos() {
+        this.listaAlumnos.forEach((el) => {console.log (el.descripcion() ) } )
+    }
+}
+        
+
+
+const alumnoController = new AlumnoController()
+
+alumnoController.agregarAlumno(new Alumno("Juan Fernandez", "HTML", 25864792, 10 , 8))
+alumnoController.agregarAlumno(new Alumno("Jose Flores", "JAVA", 28528694, 7, 8))
+alumnoController.agregarAlumno(new Alumno("Rosario Alvarez", "Css", 10801775, 5, 9))
+alumnoController.agregarAlumno(new Alumno("Elena Roca", "JAVA", 52869894,3,10))
+alumnoController.agregarAlumno(new Alumno("Miriam Lopez", "Js", 86941987,2,10))
+alumnoController.agregarAlumno(new Alumno("Bautista Zamora", "Py", 32454584,7,4))
+
+
+let nombre = prompt("ingrese el nombre")
+let curso = prompt("ingrese el curso")
+let documento = prompt("ingrese el DNI del Alumno")
+
+
+
+
+
+let alumno = new Alumno(nombre, curso, documento)
+
+alumnoController.agregarAlumno(alumno)
+        
+alumnoController.mostrarAlumnos()
+
+
+
+
+
+/* proyecto 1
 alert("¡Hola esta es la calculadora de promedios de las escuela de programacion!");
 
 let nombreIngresado =prompt("Ingrese su nombre");
 
-/*while(nombreIngresado != "" && nombreIngresado >0)
-    if (nombreIngresado == "" ){
-        prompt("Ingrese su nombre nuevamente") 
-    }else if (nombreIngresado > 0) {  
-        prompt("Ingrese su nombre nuevamente")  
-    }else {alert("Hola " +nombreIngresado+ "!" )
-        }*/
-
-
+while(nombreIngresado == ""){
+    alert("Ingrese un nombre valido")
+    nombreIngresado = prompt(".....")
+        }
+    alert("Bienvenido "+nombreIngresado)
 
 let promedio = 0
 // funcion promedio de notas
@@ -37,5 +96,4 @@ else if(promedio >= 4 && promedio <7 ){
 }
 else{
     document.write("El promedio es "+promedio+" El alumno " +nombreIngresado+ " esta desaprobado, debe recursarar la materia o debe pensar en cambiarse a diseño!!!")
-}
-
+}*/
